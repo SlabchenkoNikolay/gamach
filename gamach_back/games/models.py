@@ -17,6 +17,3 @@ class Games(models.Model):
     description = models.CharField(blank=True, max_length=1000, verbose_name="Описание")
     picture = models.ImageField(upload_to='pictures/%Y/%m/%d/', verbose_name="Картинка")
     torrent_available = models.PositiveSmallIntegerField(choices=Tor_Available, default=1, verbose_name="Альтернативно бесплатно?")
-
-    def __str__(self):
-        return self.title
